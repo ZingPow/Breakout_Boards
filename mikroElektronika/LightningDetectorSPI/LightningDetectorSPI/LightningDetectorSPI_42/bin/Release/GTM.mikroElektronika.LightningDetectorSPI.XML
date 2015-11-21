@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.mikroElektronika.LightningDetectorSPI</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI">
+            <summary>
+                A LightningDetectorSPI module for Microsoft .NET Gadgeteer
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.#ctor(System.Int32,System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+            <param name="socketNumberTwo">The second socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.OnButtonEvent(Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI,Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonState)">
+            <summary>
+                Raises the <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonPressed"/> or <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonReleased"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/> that raised the event.</param>
+            <param name="buttonState">The state of the button.</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.IsPressed">
+            <summary>
+                Gets a value that indicates whether the button of the LightningDetectorSPI is pressed.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonPressed">
+            <summary>
+                Raised when the button of the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/> is pressed.
+            </summary>
+            <remarks>
+                Implement this event handler and/or the <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonReleased"/> event handler
+                when you want to provide an action associated with button events.
+                Since the state of the button is passed to the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonEventHandler"/> delegate,
+                so you can use the same event handler for both button states.
+            </remarks>
+        </member>
+        <member name="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonReleased">
+            <summary>
+                Raised when the button of the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/> is released.
+            </summary>
+            <remarks>
+                Implement this event handler and/or the <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonPressed"/> event handler
+                when you want to provide an action associated with button events.
+                Since the state of the button is passed to the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonEventHandler"/> delegate,
+                you can use the same event handler for both button states.
+            </remarks>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonEventHandler">
+            <summary>
+                Represents the delegate that is used to handle the <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonPressed"/>
+                and <see cref="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonReleased"/> events.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/> object that raised the event.</param>
+            <param name="state">The state of the button of the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/></param>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonState">
+            <summary>
+                Represents the state of button of the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI"/>.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonState.Released">
+            <summary>
+                The button is released.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ButtonState.Pressed">
+            <summary>
+                The button is pressed.
+            </summary>
+        </member>
+    </members>
+</doc>
