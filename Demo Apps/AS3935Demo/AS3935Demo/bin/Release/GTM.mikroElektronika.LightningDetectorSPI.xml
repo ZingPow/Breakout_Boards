@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.mikroElektronika.LightningDetectorSPI</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI">
+            <summary>
+                AMS AS3935 mikroElektronika Thunder Click Lighting Detector SPI interface module driver for Microsoft .NET
+                Gadgeteer
+                <para />
+                Wiring Connections
+                <para />
+                3.3V -- Gadgeteer Pin 1 (3.3V only)
+                <para />
+                GND -- Gadgeteer Pin 10 GND
+                <para />
+                IRQ -- Gadgeteer Pin 3
+                <para />
+                CS -- Gadgeteer Pin 6
+                <para />
+                SCK -- Gadgeteer Pin 9
+                <para />
+                SDD -- Gadgeteer Pin 8
+                <para />
+                SDI -- Gadgeteer Pin 7
+                <para />
+                Requires a Gadgeteer 'S' Socket
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.#ctor(System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.DisplayRegisters(System.String)">
+            <summary>
+                Displays registry values in debug window
+            </summary>
+            <param name="description">Description header</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.PrintRegister(System.Byte)">
+            <summary>
+                Displays values for a given register address in debug window
+            </summary>
+            <param name="register">Register Address</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.ClearStatistics">
+            <summary>
+                clear the statistics built up by the lightning distance
+                estimation algorithm block
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Calibrate">
+            <summary>
+                Calibrates internal circuits.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Reset">
+            <summary>
+                Resets setting to factory defaults.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.AFEGainBoost">
+            <summary>
+                AFE Gain Boost for Indoor or Outdoor locations
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.PowerDownMode">
+            <summary>
+                LightningDetector Mode Enabled/Disabled
+                NOTE Mode Enabled performs Reset and Calibration
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.NoiseFloorLevel">
+            <summary>
+                Background Noise Level Setting
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.WatchDogLevel">
+            <summary>
+                Watchdog Level Setting
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinimumLightning">
+            <summary>
+                minimum number of events (lightning) have
+                been detected in the last 15 minutes for
+                the device to raise interrupts
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.SpikeRejectionLevel">
+            <summary>
+                Spike Rejection level to be used to increase
+                the robustness against false alarms from disturbers.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MaskDisturber">
+            <summary>
+                Sets if Disturbers will raise interrupts
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningDetected">
+            <summary>
+                Event raise when Lightning is detected
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.DisturbanceDetected">
+            <summary>
+                Event raise when a Disturbance is detected
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.NoiseDetected">
+            <summary>
+                Event raise when Noise exceeds Noise Floor Level
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.DisturbanceEventHandler">
+            <summary>Represents the delegate used for the Disturbance Detected event.</summary>
+            <param name="sender">The object that raised the event.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventHandler">
+            <summary>Represents the delegate used for the Lightning Detected event.</summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.NoiseEventHandler">
+            <summary>Represents the delegate used for the Noise Detected event.</summary>
+            <param name="sender">The object that raised the event.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.AFESetting">
+            <summary>
+                AFE Gain Boost settings.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.AFESetting.Indoor">
+            <summary>
+                Sensor located indoors.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.AFESetting.Outdoor">
+            <summary>
+                Sensor located outdoors.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.AFESetting.Unknown">
+            <summary>
+                Unknown Sensor location.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask">
+            <summary>
+                Bit Masks.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.AFE_GB">
+            <summary>
+                AFE Gain Boost BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.PWD">
+            <summary>
+                Mode Control BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.NF_LEV">
+            <summary>
+                Noise Floor Level BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.WDTH">
+            <summary>
+                Watchdog Threshold BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.CL_STAT">
+            <summary>
+                Clear Statistics BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.MIN_NUM_LIGH">
+            <summary>
+                Minimum Number Of Lightning BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.SREJ">
+            <summary>
+                Spike Rejection BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.LCO_FDIV">
+            <summary>
+                Frequency Division Ration For Antenna Tuning BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.MASK_DIST">
+            <summary>
+                Mask Disturber BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.INT">
+            <summary>
+                Interrupt BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.S_LIG_L">
+            <summary>
+                Energy of the Single Lightning LSBYTE BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.S_LIG_M">
+            <summary>
+                Energy of the Single Lightning MSBYTE BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.S_LIG_MM">
+            <summary>
+                Energy of the Single Lightning MMSBYTE BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.DISTANCE">
+            <summary>
+                Distance estimation BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.DISP_LCO">
+            <summary>
+                Display LCO on IRQ pin BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.DISP_SRCO">
+            <summary>
+                Display SRCO on IRQ pin BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.DISP_TRCO">
+            <summary>
+                Display TRCO on IRQ pin BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.TUN_CAP">
+            <summary>
+                Internal Tuning Capacitors BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.TRCO_CALIB_DONE">
+            <summary>
+                Calibration of TRCO done BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.TRCO_CALIB_NOK">
+            <summary>
+                Calibration of TRCO unsuccessful BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.SRCO_CALIB_DONE">
+            <summary>
+                Calibration of SRCO done BitMask.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.BitMask.SRCO_CALIB_NOK">
+            <summary>
+                Calibration of SRCO unsuccessful BitMask.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinNumberLightning">
+            <summary>
+                Minimum Number of Lightning settings.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinNumberLightning.One">
+            <summary>
+                One.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinNumberLightning.Five">
+            <summary>
+                Five.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinNumberLightning.Nine">
+            <summary>
+                Nine.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.MinNumberLightning.Sixteen">
+            <summary>
+                Sixteen.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Mode">
+            <summary>
+                Mode settings.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Mode.Disabled">
+            <summary>
+                Mode down mode disabled.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Mode.Enabled">
+            <summary>
+                Mode down mode enabled
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register">
+            <summary>
+                Register settings.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.AFE_GB">
+            <summary>
+                AFE Gain Boost Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.PWD">
+            <summary>
+                Mode Control Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.NF_LEV">
+            <summary>
+                Noise Floor Level Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.WDTH">
+            <summary>
+                Watchdog Threshold Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.CL_STAT">
+            <summary>
+                Clear Statistics Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.MIN_NUM_LIGH">
+            <summary>
+                Minimum Number Of Lightning Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.SREJ">
+            <summary>
+                Spike Rejection Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.LCO_FDIV">
+            <summary>
+                Frequency Division Ration For Antenna Tuning Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.MASK_DIST">
+            <summary>
+                Mask Disturber Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.INT">
+            <summary>
+                Interrupt Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.S_LIG_L">
+            <summary>
+                Energy of the Single Lightning LSBYTE Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.S_LIG_M">
+            <summary>
+                Energy of the Single Lightning MSBYTE Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.S_LIG_MM">
+            <summary>
+                Energy of the Single Lightning MMSBYTE Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.DISTANCE">
+            <summary>
+                Distance estimation Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.DISP_LCO">
+            <summary>
+                Display LCO on IRQ pin Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.DISP_SRCO">
+            <summary>
+                Display SRCO on IRQ pin Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.DISP_TRCO">
+            <summary>
+                Display TRCO on IRQ pin Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.TUN_CAP">
+            <summary>
+                Internal Tuning Capacitors Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.TRCO_CALIB_DONE">
+            <summary>
+                Calibration of TRCO unsuccessful Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.TRCO_CALIB_NOK">
+            <summary>
+                Calibration of TRCO unsuccessful Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.SRCO_CALIB_DONE">
+            <summary>
+                Calibration of SRCO done Register.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.Register.SRCO_CALIB_NOK">
+            <summary>
+                Calibration of SRCO unsuccessful Register.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventArgs">
+            <summary>Event arguments for the Lighting Detected event.</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventArgs"/> class.
+            </summary>
+            <param name="distance">Distance of the detected lightning.</param>
+            <param name="energy">Energy of the detected lightning. This value is just a pure number and has no physical meaning.</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventArgs.Distance">
+            <summary>
+                Gets the distance of the detected lightning.
+            </summary>
+            <value>
+                The distance in kilometers. Max distance is 40 km.
+            </value>
+        </member>
+        <member name="P:Gadgeteer.Modules.mikroElektronika.LightningDetectorSPI.LightningEventArgs.Energy">
+            <summary>
+                Gets the energy of the detected lightning.
+            </summary>
+            <value>
+                This value is just a pure number and has no physical meaning.
+            </value>
+        </member>
+    </members>
+</doc>

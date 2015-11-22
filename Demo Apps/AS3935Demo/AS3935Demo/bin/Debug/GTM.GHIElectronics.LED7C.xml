@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.GHIElectronics.LED7C</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.LED7C">
+            <summary>An LED7C module for Microsoft .NET Gadgeteer</summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.LED7C.#ctor(System.Int32)">
+            <summary>Constructs a new instance.</summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.GHIElectronics.LED7C.SetColor(Gadgeteer.Modules.GHIElectronics.LED7C.Color)">
+            <summary>Sets the color of the LED.</summary>
+            <param name="color">The color to set to.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.GHIElectronics.LED7C.Color">
+            <summary>The possible display colors.</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Red">
+            <summary>Red</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Green">
+            <summary>Green</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Blue">
+            <summary>Blue</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Yellow">
+            <summary>Yellow</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Cyan">
+            <summary>Cyan</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Magenta">
+            <summary>Magenta</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.White">
+            <summary>White</summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.GHIElectronics.LED7C.Color.Off">
+            <summary>Off</summary>
+        </member>
+    </members>
+</doc>
